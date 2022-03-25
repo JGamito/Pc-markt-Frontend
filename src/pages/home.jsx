@@ -1,7 +1,12 @@
 import React from "react";
+import CategoriesSidebar from "../components/categoriesSidebar/categoriesSidebar";
 
 const Home = () => {
-  return <h1 style={{ marginTop: "50px" }}>Home</h1>;
+    return (
+        <div>
+            <CategoriesSidebar/>
+        </div>
+    )
 };
 
 export default Home;
