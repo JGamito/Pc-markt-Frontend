@@ -1,31 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
-import logo from "../logo.svg";
+import styles from "./navBar.module.css";
+import logo from "../../logo.svg";
 
 const NavBar = () => {
   return (
-    <div className="container">
-      <div className="links-container">
+    <div className={styles.container}>
+      <div className={styles.linksContainer}>
         <Link to="/home">
           <img
-            className="App-logo"
+            className={styles.logo}
             alt="logo"
             src={logo}
             width="150px"
             height="150px"
           />
         </Link>
-        <Link className="links" to="/home">
+        <Link className={styles.links} to="/home">
           Home
         </Link>
-        <Link className="links" to="/page1">
+        <Link className={styles.links} to="/page1">
           Page 1
         </Link>
-        <Link className="links" to="/page2">
+        <Link className={styles.links} to="/page2">
           Page 2
         </Link>
-        <Link className="links" to="/page3">
+        <Link className={styles.links} to="/page3">
           Page 3
         </Link>
       </div>

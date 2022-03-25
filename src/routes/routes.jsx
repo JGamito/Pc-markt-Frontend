@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./../Pages/home";
-import Page1 from "./../Pages/page1";
-import Page2 from "./../Pages/page2";
-import Page3 from "./../Pages/page3";
+import Home from "../pages/home";
+import Page1 from "../pages/page1";
+import Page2 from "../pages/page2";
+import Page3 from "../pages/page3";
 
 const Navigator = () => {
   return (

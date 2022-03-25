@@ -5,12 +5,14 @@
   position: fixed;
   top: 0;
 }
-.links-container {
+
+.linksContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.App-logo {
+
+.logo {
   height: 40px;
   pointer-events: none;
 }
