@@ -1,18 +1,21 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home";
-import Page1 from "../pages/page1";
-import Page2 from "../pages/page2";
-import Page3 from "../pages/page3";
+import Category from "../pages/category";
+import Register from "../pages/register";
+import Login from "../pages/login";
+import Checkout from "../pages/checkout";
 
 const Navigator = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/page1" element={<Page1 />} />
-      <Route path="/page2" element={<Page2 />} />
-      <Route path="/page3" element={<Page3 />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/categories/:id" element={<Category />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
   );
 };
+
 export default Navigator;
