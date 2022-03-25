@@ -1,5 +1,5 @@
 import React from "react";
-import CategoriesSidebar from "../components/categoriesSidebar/categoriesSidebar";
+import CategoriesSidebar from "../../components/categoriesSidebar/categoriesSidebar";
 
 const Home = () => {
     return (
