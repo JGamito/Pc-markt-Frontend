@@ -1,32 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
-import logo from "../../logo.svg";
+import logo from "../../logo.png";
 
 const NavBar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.linksContainer}>
-        <Link to="/home">
-          <img
-            className={styles.logo}
-            alt="logo"
-            src={logo}
-            width="150px"
-            height="150px"
-          />
+      <div>
+        {" "}
+        <Link to="/">
+          <img className={styles.logo} alt="logo" src={logo} />
         </Link>
-        <Link className={styles.links} to="/home">
+      </div>
+      <div className={styles.linksContainer}>
+        <Link className={styles.links} to="/">
           Home
         </Link>
-        <Link className={styles.links} to="/page1">
-          Page 1
+        <Link className={styles.links} to="/register">
+          Nuevo Usuario
         </Link>
-        <Link className={styles.links} to="/page2">
-          Page 2
-        </Link>
-        <Link className={styles.links} to="/page3">
-          Page 3
+        <Link className={styles.links} to="/login">
+          Identificarme
         </Link>
       </div>
     </div>
