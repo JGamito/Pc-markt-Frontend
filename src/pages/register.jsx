@@ -7,7 +7,7 @@ const Register = () => {
     <>
       <h1 style={{ marginTop: "50px" }}>Register</h1>
       <button onClick={() => navigate(-1)}>Back</button>
-      <button onClick={() => navigate("/home")}>Home</button>
+      <button onClick={() => navigate("/")}>Home</button>
     </>
   );
 };

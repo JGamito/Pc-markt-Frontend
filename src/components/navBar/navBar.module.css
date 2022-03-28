@@ -4,12 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 30px 10px 20px;
+  z-index: 100;
+  width: 100vw;
+  position: fixed;
 }
-
 .linksContainer {
+  padding-right: 40px;
 }
-
 .logo {
   height: 40px;
   pointer-events: none;

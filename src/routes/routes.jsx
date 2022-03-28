@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home/home";
 import Register from "../pages/register";
-import Login from "../pages/login";
+import Login from "../pages/Login/login";
 import Checkout from "../pages/checkout";
 
 const Navigator = () => {
