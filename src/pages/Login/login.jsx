@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import { useNavigate, usestate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./logIn.module.css";
-
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const User = { email, password };
-
-  fetch("https://pcmarkt.herokuapp.com/login", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(User),
-  });
-};
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const User = { email, password };
+
+    fetch("http://localhost:8000/login", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(User),
+    }).then((response) => console.log(response));
+  };
+
   return (
     <div className={styles.father}>
       <form className={styles.body}>
