@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
         <Navigator />
       </BrowserRouter>
     </div>
