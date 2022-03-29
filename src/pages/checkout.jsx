@@ -7,7 +7,7 @@ const Checkout = () => {
     <>
       <h1 style={{ marginTop: "50px" }}>Checkout</h1>
       <button onClick={() => navigate(-1)}>Back</button>
-      <button onClick={() => navigate("/home")}>Home</button>
+      <button onClick={() => navigate("/")}>Home</button>
     </>
   );
 };
