@@ -8,9 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    
     e.preventDefault();
-    console.log("function");
     const user = { email, password };
 
     fetch("https://pcmarkt.herokuapp.com/login/login", {
