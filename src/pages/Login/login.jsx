@@ -9,18 +9,18 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const User = { email, password };
+    const user = { email, password };
 
-    fetch("http://localhost:8000/login", {
+    fetch("https://pcmarkt.herokuapp.com/login/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(User),
+      body: JSON.stringify(user),
     }).then((response) => console.log(response));
   };
 
   return (
     <div className={styles.father}>
-      <form className={styles.body}>
+      <form className={styles.body} onSubmit={handleSubmit}>
         <div className={styles.formulary}>
           <h4>Iniciar sesión</h4>
           <input
@@ -37,7 +37,6 @@ const Login = () => {
           />
           <br />
           <button
-            onSubmit={handleSubmit}
             className={styles.button}
             type="submit"
           >
