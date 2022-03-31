@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./logIn.module.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { email, password };
+
+    fetch("https://pcmarkt.herokuapp.com/login/login", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(user),
+    }).then((response) => console.log(response));
+  };
+
   return (
     <div className={styles.father}>
-      <form className={styles.body}>
+      <form className={styles.body} onSubmit={handleSubmit}>
         <div className={styles.formulary}>
           <h4>Iniciar sesión</h4>
-          <input type="text" placeholder="E-mail" />
-          <input type="password" placeholder="Contraseña" />
+          <input
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            type="text"
+            placeholder="E-mail"
+          />
+          <input
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            type="password"
+            placeholder="Contraseña"
+          />
           <br />
-          <button className={styles.button} type="submit">
+          <button
+            className={styles.button}
+            type="submit"
+          >
             Iniciar sesión
           </button>
         </div>
