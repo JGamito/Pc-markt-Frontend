@@ -1,13 +1,16 @@
 import React from "react";
 import CategoriesSidebar from "../../components/categoriesSidebar/categoriesSidebar";
-import styles from "./home.module.css";
+import ProductGrid from "../../components/productGrid/productGrid";
+import NavBar from "../../components/navBar/navBar";
+
 const Home = () => {
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Home</h1>
-      <CategoriesSidebar />
-    </div>
-  );
+    return (
+        <div>
+            <NavBar />
+            <CategoriesSidebar/>
+            <ProductGrid />
+        </div>
+    )
 };
 
 export default Home;

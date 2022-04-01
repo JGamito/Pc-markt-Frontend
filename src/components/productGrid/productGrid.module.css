@@ -1,0 +1,7 @@
+.tablet {
+  display: flex;
+  margin-left: 240px;
+  margin-right: 200px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
