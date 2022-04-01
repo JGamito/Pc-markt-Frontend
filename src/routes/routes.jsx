@@ -12,6 +12,7 @@ const Navigator = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/categories/:category" element={<Checkout />} />
     </Routes>
   );
 };
