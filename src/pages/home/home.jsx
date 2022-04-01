@@ -4,13 +4,12 @@ import ProductGrid from "../../components/productGrid/productGrid";
 import NavBar from "../../components/navBar/navBar";
 
 const Home = () => {
-    return (
-        <div>
-            <NavBar />
-            <CategoriesSidebar/>
-            <ProductGrid />
-        </div>
-    )
+  return (
+    <div>
+      <CategoriesSidebar />
+      <ProductGrid />
+    </div>
+  );
 };
 
 export default Home;

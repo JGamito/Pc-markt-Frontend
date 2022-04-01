@@ -1,28 +1,24 @@
 .container {
-    color: black;
-    padding: 20px;
-    width: 240px;
-    height: 100vh;
-    
-    
+  color: black;
+  padding: 20px;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
 }
-    .link{
-        text-decoration: none;
-        list-style: none;
-        color: black;
-
-    }
+.link {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
 
 .span {
-    color:red;
-    font-size: 30px;
-    text-align: left;
-    margin-bottom: 30px;
-
+  color: red;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 30px;
 }
 .li {
-    margin: 0 auto;
-    padding: 5px;
-    font-size: 18px;
-   
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 18px;
 }
