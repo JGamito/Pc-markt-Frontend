@@ -4,3 +4,14 @@
   align-items: center;
   text-align: center;
 }
+
+.priceMax {
+  text-decoration: line-through;
+  color: rgb(241, 10, 10);
+  margin-left: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+}
