@@ -11,7 +11,7 @@ const [products, setProducts] = useState([])
           };
         fetch ('https://pcmarkt.herokuapp.com/products', requestOptions).then(response => response.json()).then(response => setProducts(response.products)); 
     },[])
-    return <div className={styles.tablet}>{products.map(product => <ProductCard picture={product.picture} name={product.name} description={product.description} price={product.price}></ProductCard>)} </div>
+    return <div className={styles.tablet}>{products.map(product => <ProductCard picture={product.picture} title={product.title} description={product.description} priceMin={product.priceMin} priceMax={product.priceMax}></ProductCard>)} </div>
 }
 
 export default ProductGrid;

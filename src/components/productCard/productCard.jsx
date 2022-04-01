@@ -5,9 +5,9 @@ const ProductCard = (props) => {
    return (<div className={styles.container}>
        <img src={props.picture} width= "120px" height={"120px"}/>
        <div>
-           <b>{props.name}</b>
+           <b>{props.title}</b>
            <p>{props.description}</p>
-           <p>{props.price}</p>
+           <p>{props.priceMin}      {props.priceMax}</p>
         </div>
    </div>)
 }
