@@ -8,3 +8,7 @@
   justify-content: center;
   height: 100vh;
 }
+.input {
+  display: flex;
+  flex-direction: column;
+}
