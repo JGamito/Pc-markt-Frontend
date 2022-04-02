@@ -16,13 +16,13 @@ const Login = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),
-    }).then((response) => {
-      if (response.status === 200) {
-        localStorage.setItem("token", response.json().token);
-      } else {
-        setError("Usuario y/o contraseña no valida");
-      }
-    });
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        response.token && localStorage.setItem("token", response.token);
+        navigate("/");
+      })
+      .catch((error) => setError("Usuario y/o contraseña no valida"));
 
     /*.then((response) => response.json())
       .then((token) => localStorage.setItem("token", token.token))

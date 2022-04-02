@@ -4,10 +4,25 @@ import styles from "./navBar.module.css";
 import logo from "../../logo.png";
 
 const NavBar = () => {
-  return (
+  return localStorage.getItem("token") ? (
     <div className={styles.container}>
       <div>
-        {" "}
+        <Link to="/">
+          <img className={styles.logo} alt="logo" src={logo} />
+        </Link>
+      </div>
+      <div className={styles.linksContainer}>
+        <Link className={styles.links} to="/">
+          Home
+        </Link>
+        <Link className={styles.links} to="/checkout">
+          Carrito
+        </Link>
+      </div>
+    </div>
+  ) : (
+    <div className={styles.container}>
+      <div>
         <Link to="/">
           <img className={styles.logo} alt="logo" src={logo} />
         </Link>
