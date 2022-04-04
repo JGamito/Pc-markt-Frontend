@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
 import logo from "../../logo.png";
+import useAuth from "../../hooks/use-auth";
 
 const NavBar = () => {
+  const { logged } = useAuth();
+
   return (
     <div className={styles.container}>
       <div>
@@ -12,7 +15,7 @@ const NavBar = () => {
         </Link>
       </div>
 
-      {localStorage.getItem("token") ? (
+      {logged ? (
         <div className={styles.linksContainer}>
           <Link className={styles.links} to="/">
             Home

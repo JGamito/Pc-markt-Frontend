@@ -1,36 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./logIn.module.css";
+import useAuth from "../../hooks/use-auth";
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { email, password };
-
-    fetch("https://pcmarkt.herokuapp.com/login/login", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        response.token && localStorage.setItem("token", response.token);
-        navigate("/");
-      })
-      .catch((error) => setError("Usuario y/o contraseña no valida"));
-
-    /*.then((response) => response.json())
-      .then((token) => localStorage.setItem("token", token.token))
-      .catch((error) => setError(error));
-     {error && <div>{error}</div>}
-    {
-      token && navigate("/");
-    }*/
+    login(user);
+    navigate("/");
   };
 
   return (

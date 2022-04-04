@@ -19,6 +19,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus = "active";
+
     const user = {
       name,
       surname,
