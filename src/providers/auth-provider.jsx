@@ -31,12 +31,13 @@ const reducer = (state, action) => {
 const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const register = ({ email, password }) => {
-    api
-      .register({ email, password })
+  const register = (user) => {
+    return api
+      .register(user)
       .then(({ token }) => {
         dispatch({ type: "register" });
         localStorage.setItem("token", token);
+        return token;
       })
       .catch((error) => dispatch({ type: "logout" }));
   };

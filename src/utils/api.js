@@ -23,4 +23,21 @@ async function logIn(user) {
     console.error(error);
   }
 }
-export default { logIn };
+
+async function register(user) {
+  try {
+    const { data } = await api.post("/login/register", user);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export default { logIn, register };
+/*
+fetch("https://pcmarkt.herokuapp.com/users/", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify(user),
+});
+*/

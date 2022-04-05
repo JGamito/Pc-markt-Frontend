@@ -5,7 +5,7 @@ import logo from "../../logo.png";
 import useAuth from "../../hooks/use-auth";
 
 const NavBar = () => {
-  const { logged } = useAuth();
+  const { logged, logout } = useAuth();
 
   return (
     <div className={styles.container}>
@@ -24,7 +24,7 @@ const NavBar = () => {
           <Link className={styles.links} to="/checkout">
             Carrito
           </Link>
-          <Link className={styles.links} to="/">
+          <Link className={styles.links} to="/" onClick={() => logout()}>
             Desconectarme!
           </Link>
         </div>
@@ -33,7 +33,6 @@ const NavBar = () => {
           <Link className={styles.links} to="/">
             Home
           </Link>
-
           <Link className={styles.links} to="/register">
             Nuevo Usuario
           </Link>

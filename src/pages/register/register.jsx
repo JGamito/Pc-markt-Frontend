@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/use-auth";
 import styles from "./register.module.css";
 
 const Register = () => {
@@ -15,10 +16,11 @@ const Register = () => {
   const [streetExtra, setStreetExtra] = useState("");
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState("");
+  const { register } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus = "active";
+    setStatus("active");
 
     const user = {
       name,
@@ -33,13 +35,12 @@ const Register = () => {
       phone,
       status,
     };
-
-    fetch("https://pcmarkt.herokuapp.com/users/", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(user),
-    });
-    //    navigate("/login/login");
+    const token = await register(user);
+    console.log(token);
+    if (token) {
+      navigate("/");
+    } else {
+    }
   };
 
   return (
@@ -105,7 +106,7 @@ const Register = () => {
             className={styles.input}
             value={postalCode}
             onChange={(event) => setPostalCode(event.target.value)}
-            type="text"
+            type="number"
             placeholder="Codigo Postal"
             pattern="[0-9]{5}"
           />
