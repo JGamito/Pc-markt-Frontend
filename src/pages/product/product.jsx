@@ -1,12 +1,8 @@
-import React, { PureComponent, useEffect, useState } from "react";
-import { Provider } from "react-redux";
-import { createStore, combineReducers } from "redux";
+import React, { useEffect, useState } from "react";
+
 import styles from "./product.module.css";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "animate.css/animate.min.css";
-import "font-awesome/css/font-awesome.min.css";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Product = ({}) => {
   const params = useParams();
@@ -20,7 +16,7 @@ const Product = ({}) => {
   }, [params]);
   return (
     <div className={styles.container}>
-      <img src={product.picture} width="300px" height={"300px"} />
+      <img src={product.picture} width="300px" height={"300px"} alt="prod" />
       <div>
         <b>{product.title}</b>
         <p>{product.description}</p>
