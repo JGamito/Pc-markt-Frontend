@@ -34,10 +34,3 @@ async function register(user) {
 }
 
 export default { logIn, register };
-/*
-fetch("https://pcmarkt.herokuapp.com/users/", {
-  method: "POST",
-  headers: { "content-type": "application/json" },
-  body: JSON.stringify(user),
-});
-*/

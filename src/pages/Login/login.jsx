@@ -7,7 +7,6 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const { login } = useAuth();
 
   const handleSubmit = (e) => {
@@ -39,7 +38,6 @@ const Login = () => {
             Iniciar sesión
           </button>
         </div>
-        {error && <h3>' {error}'</h3>}
       </form>
       <div>
         <button onClick={() => navigate(-1)}>Back</button>

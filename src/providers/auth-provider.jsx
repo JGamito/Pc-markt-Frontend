@@ -25,6 +25,11 @@ const reducer = (state, action) => {
         ...state,
         logged: true,
       };
+    default:
+      return {
+        ...state,
+        logged: false,
+      };
   }
 };
 
