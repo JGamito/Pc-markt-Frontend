@@ -39,7 +39,10 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem("token", token);
         return token;
       })
-      .catch((error) => dispatch({ type: "logout" }));
+      .catch((error) => {
+        dispatch({ type: "logout" });
+        throw error;
+      });
   };
 
   const login = ({ email, password }) => {

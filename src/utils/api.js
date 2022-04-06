@@ -29,7 +29,7 @@ async function register(user) {
     const { data } = await api.post("/login/register", user);
     return data;
   } catch (error) {
-    console.error(error);
+    throw error;
   }
 }
 

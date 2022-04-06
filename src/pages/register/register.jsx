@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/use-auth";
 import styles from "./register.module.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -35,11 +36,21 @@ const Register = () => {
       phone,
       status,
     };
-    const token = await register(user);
-    console.log(token);
-    if (token) {
-      navigate("/");
-    } else {
+    try {
+      const token = await register(user);
+      if (token) {
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error("Complete todos los campos para registrarse", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
