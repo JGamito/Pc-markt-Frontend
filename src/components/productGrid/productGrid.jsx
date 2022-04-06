@@ -20,6 +20,7 @@ const ProductGrid = () => {
     <div className={styles.tablet}>
       {products.map((product) => (
         <ProductCard
+          id={product._id}
           picture={product.picture}
           title={product.title}
           description={product.description}
