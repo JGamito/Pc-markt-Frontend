@@ -32,5 +32,5 @@ async function register(user) {
     throw error;
   }
 }
-
-export default { logIn, register };
+const exported = { logIn, register };
+export default exported;
