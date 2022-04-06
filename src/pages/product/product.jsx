@@ -10,7 +10,7 @@ const Product = () => {
 
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8000/products/${params.id}`)
+    fetch(`https://pcmarkt.herokuapp.com/products/${params.id}`)
       .then((response) => response.json())
       .then((response) => setProduct(response));
   }, [params]);
