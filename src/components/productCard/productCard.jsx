@@ -6,14 +6,19 @@ const ProductCard = (props) => {
   return (
     <div className={styles.container}>
       <img src={props.picture} width="120px" height={"120px"} alt="prod" />
-      <div>
-        <Link to={`/product/${props.id}`}>{props.title}</Link>
-        <p>{props.description}</p>
+      <div className={styles.write}>
+        <div className={styles.title}>
+          <Link to={`/product/${props.id}`}>{props.title}</Link>
+          <p>{props.description}</p>
+        </div>
         <div className={styles.price}>
-          <p>{props.priceMin} €</p>
+          <p className={styles.priceMin}>{props.priceMin} €</p>
           {props.priceMax && (
             <p className={styles.priceMax}>{props.priceMax} €</p>
           )}
+        </div>
+        <div>
+          <p className={styles.receive}>Recíbelo mañana</p>
         </div>
       </div>
     </div>
