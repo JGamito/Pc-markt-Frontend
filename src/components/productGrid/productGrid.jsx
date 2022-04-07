@@ -26,6 +26,7 @@ const ProductGrid = () => {
           description={product.description}
           priceMin={product.priceMin}
           priceMax={product.priceMax}
+          features={product.features}
         ></ProductCard>
       ))}{" "}
     </div>
