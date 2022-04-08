@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   margin-top: 80px;
 }
-@media (max-width: 360px) {
+@media (max-width: 412px) {
   .tablet {
     display: flex;
     margin-left: 20px;
@@ -14,6 +14,4 @@
     margin-top: 80px;
     justify-content: center;
   }
-
 }
-
