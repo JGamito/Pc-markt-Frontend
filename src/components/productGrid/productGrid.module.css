@@ -8,8 +8,8 @@
 @media (max-width: 412px) {
   .tablet {
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center;
