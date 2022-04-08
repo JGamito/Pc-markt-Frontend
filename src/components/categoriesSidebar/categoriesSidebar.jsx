@@ -13,7 +13,7 @@ const CategoriesSidebar = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.span}>Categorias</h1>
-      <ul>
+      <ul className={styles.ul}>
         {categories.map((category) => (
           <Link to={`/categories/${category.slug}`} className={styles.link}>
             <li className={styles.li}>{category.name}</li>
