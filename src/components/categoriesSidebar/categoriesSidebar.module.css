@@ -10,7 +10,6 @@
   list-style: none;
   color: black;
 }
-
 .span {
   color: black;
   font-size: 30px;
@@ -22,3 +21,29 @@
   padding: 5px;
   font-size: 18px;
 }
+@media (max-width: 360px) {
+  .container {
+    color: black;
+    padding: 10px;
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+  }
+  .span {
+    color: black;
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .li {
+    margin: 0px;
+    padding: 0px;
+    font-size: 8px;
+  }
+  .ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+}
+
