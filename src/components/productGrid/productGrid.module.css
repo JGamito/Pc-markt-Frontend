@@ -5,3 +5,13 @@
   flex-wrap: wrap;
   margin-top: 80px;
 }
+@media (max-width: 360px) {
+  .tablet {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center;
+  }
+}
