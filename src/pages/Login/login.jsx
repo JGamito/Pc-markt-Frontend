@@ -22,12 +22,14 @@ const Login = () => {
         <div className={styles.formulary}>
           <h4>Iniciar sesión</h4>
           <input
+            className={styles.input}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="text"
             placeholder="E-mail"
           />
           <input
+            className={styles.input}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             type="password"
@@ -35,7 +37,7 @@ const Login = () => {
           />
           <br />
           <button className={styles.button} type="submit">
-            Iniciar sesión
+            INICIAR SESION
           </button>
         </div>
       </form>
